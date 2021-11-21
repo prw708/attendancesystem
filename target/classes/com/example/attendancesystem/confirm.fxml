@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.example.attendancesystem.ConfirmController"
+          hgap="10" vgap="10" prefWidth="300">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+    <Label fx:id="title" text="" styleClass="h4" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <VBox GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <Label fx:id="mainContent" wrapText="true" text=""></Label>
+    </VBox>
+    <GridPane GridPane.columnIndex="0" GridPane.rowIndex="2" alignment="BOTTOM_RIGHT" hgap="10">
+        <Button text="OK" GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="btn, btn-primary" onAction="#onOkButtonClick"/>
+    </GridPane>
+</GridPane>

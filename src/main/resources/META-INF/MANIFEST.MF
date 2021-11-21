@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Main-Class: com.example.attendancesystem.Launcher
+Class-Path: formsfx-core-11.3.2.jar controlsfx-11.1.0.jar javafx-base-17
+ .0.0.1.jar javafx-graphics-17.0.0.1-win.jar bcrypt-0.9.0.jar javafx-gra
+ phics-17.0.0.1.jar checker-qual-3.5.0.jar bootstrapfx-core-0.4.0.jar va
+ lidatorfx-0.1.13.jar javafx-fxml-17.0.0.1.jar javafx-controls-17.0.0.1.
+ jar javafx-controls-17.0.0.1-win.jar postgresql-42.3.0.jar bytes-1.3.0.
+ jar javafx-base-17.0.0.1-win.jar javafx-fxml-17.0.0.1-win.jar h2-1.4.200.jar
+

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane styleClass="container" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.attendancesystem.CalendarController">
+  <columnConstraints>
+    <ColumnConstraints percentWidth="65" />
+    <ColumnConstraints percentWidth="35" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints percentHeight="10" />
+    <RowConstraints percentHeight="5" />
+    <RowConstraints percentHeight="85" />
+  </rowConstraints>
+   <children>
+     <GridPane styleClass="padding-left" GridPane.columnIndex="1" GridPane.rowIndex="0">
+       <columnConstraints>
+         <ColumnConstraints percentWidth="50"/>
+         <ColumnConstraints percentWidth="50"/>
+       </columnConstraints>
+       <rowConstraints>
+         <RowConstraints />
+       </rowConstraints>
+       <Label fx:id="fxName" text="" styleClass="h3" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+       <GridPane hgap="10" styleClass="align-right" GridPane.columnIndex="1" GridPane.rowIndex="0">
+         <Button fx:id="resetData" text="Reset Data" styleClass="btn, btn-danger" onAction="#onResetDataButtonClick" GridPane.columnIndex="0" visible="false"/>
+         <Button text="Logout" styleClass="btn, btn-primary" onAction="#onLogoutButtonClick" GridPane.columnIndex="1"/>
+         <columnConstraints>
+           <ColumnConstraints />
+           <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+           <RowConstraints />
+         </rowConstraints>
+       </GridPane>
+     </GridPane>
+     <GridPane styleClass="padding-left" GridPane.columnIndex="1" GridPane.rowIndex="2" hgap="20" vgap="20">
+       <Label GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="h3" text="Account Actions" />
+       <HBox GridPane.columnIndex="0" GridPane.rowIndex="1">
+         <GridPane hgap="10" vgap="10">
+           <Button text="Change Password" styleClass="btn, btn-info" onAction="#onChangePasswordButtonClick" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+           <Button fx:id="selectUser" text="Select User" styleClass="btn, btn-info" onAction="#onSelectUserButtonClick" GridPane.rowIndex="0" GridPane.columnIndex="1" visible="false"/>
+           <Button fx:id="resetPassword" text="Reset Password" styleClass="btn, btn-warning" onAction="#onResetPasswordButtonClick" GridPane.rowIndex="1" GridPane.columnIndex="0" visible="false"/>
+           <Button fx:id="deleteUser" text="Delete User" styleClass="btn, btn-warning" onAction="#onDeleteUserButtonClick" GridPane.rowIndex="1" GridPane.columnIndex="1" visible="false"/>
+         </GridPane>
+       </HBox>
+       <Label GridPane.columnIndex="0" GridPane.rowIndex="2" styleClass="h3" text="Attendance Actions" />
+       <HBox GridPane.columnIndex="0" GridPane.rowIndex="3">
+         <GridPane hgap="10" vgap="10">
+           <Button text="Check In" styleClass="btn, btn-success" onAction="#onCheckInButtonClick" GridPane.columnIndex="0"/>
+           <Button text="Check Out" styleClass="btn, btn-danger" onAction="#onCheckOutButtonClick" GridPane.columnIndex="1"/>
+           <Button text="Manual Entry" styleClass="btn, btn-primary" onAction="#onManualButtonClick" GridPane.columnIndex="2"/>
+         </GridPane>
+       </HBox>
+       <Label GridPane.columnIndex="0" GridPane.rowIndex="4" styleClass="h3" text="Details" />
+       <ScrollPane fx:id="times" GridPane.columnIndex="0" GridPane.rowIndex="5"></ScrollPane>
+       <columnConstraints>
+         <ColumnConstraints percentWidth="100" />
+       </columnConstraints>
+       <rowConstraints>
+         <RowConstraints />
+       </rowConstraints>
+     </GridPane>
+     <StackPane fx:id="calendarOverlap" GridPane.columnIndex="0" GridPane.rowIndex="2">
+       <GridPane fx:id="calendar" hgap="3" vgap="3">
+          <columnConstraints>
+            <ColumnConstraints percentWidth="14.28" />
+            <ColumnConstraints percentWidth="14.28" />
+            <ColumnConstraints percentWidth="14.28" />
+            <ColumnConstraints percentWidth="14.28" />
+            <ColumnConstraints percentWidth="14.28" />
+            <ColumnConstraints percentWidth="14.28" />
+            <ColumnConstraints percentWidth="14.28" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints percentHeight="16.67" />
+            <RowConstraints percentHeight="16.67" />
+            <RowConstraints percentHeight="16.67" />
+            <RowConstraints percentHeight="16.67" />
+            <RowConstraints percentHeight="16.67" />
+            <RowConstraints percentHeight="16.67" />
+          </rowConstraints>
+        </GridPane>
+      </StackPane>
+      <GridPane fx:id="weekdays" GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <columnConstraints>
+          <ColumnConstraints percentWidth="14.28" />
+          <ColumnConstraints percentWidth="14.28" />
+          <ColumnConstraints percentWidth="14.28" />
+          <ColumnConstraints percentWidth="14.28" />
+          <ColumnConstraints percentWidth="14.28" />
+          <ColumnConstraints percentWidth="14.28" />
+          <ColumnConstraints percentWidth="14.28" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints />
+        </rowConstraints>
+         <children>
+           <VBox alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0">
+             <Label text="SUN" />
+           </VBox>
+           <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="0">
+             <Label text="MON" />
+           </VBox>
+           <VBox alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="0">
+             <Label text="TUE" />
+           </VBox>
+           <VBox alignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="0">
+             <Label text="WED" />
+           </VBox>
+           <VBox alignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="0">
+             <Label text="THU" />
+           </VBox>
+           <VBox alignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="0">
+             <Label text="FRI" />
+           </VBox>
+           <VBox alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="0">
+             <Label text="SAT" />
+           </VBox>
+         </children>
+      </GridPane>
+      <GridPane fx:id="calendarTitle" GridPane.columnIndex="0" GridPane.rowIndex="0">
+        <columnConstraints>
+          <ColumnConstraints percentWidth="50" />
+          <ColumnConstraints percentWidth="50" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints />
+        </rowConstraints>
+        <Label fx:id="fxMonth" styleClass="h2" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <GridPane hgap="10" vgap="10" styleClass="align-right" GridPane.columnIndex="1" GridPane.rowIndex="0">
+          <Button onAction="#onBackButtonClick" styleClass="btn, btn-primary" text="Back" GridPane.columnIndex="0" />
+          <Button onAction="#onCurrentButtonClick" styleClass="btn, btn-primary" text="Current" GridPane.columnIndex="1" />
+          <Button onAction="#onForwardButtonClick" styleClass="btn, btn-primary" text="Next" GridPane.columnIndex="2" />
+            <columnConstraints>
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+      </GridPane>
+   </children>
+</GridPane>

@@ -1,0 +1,64 @@
+.container {
+    -fx-padding: 20px;
+}
+
+.align-left {
+    -fx-alignment: "center-left";
+}
+
+.align-right {
+    -fx-alignment: "center-right";
+}
+
+.padding-left {
+    -fx-padding: 0 0 0 20px;
+}
+
+.lbl-padding {
+    -fx-padding: 0 10px 0 10px;
+}
+
+#calendar {
+    -fx-background-color: #eaeaea;
+}
+
+.cell-empty {
+    -fx-background-color: #eee;
+}
+
+.cell-fill {
+    -fx-background-color: #fff;
+}
+
+.cell-fill-current {
+    -fx-background-color: #c5dbfc;
+}
+
+.cell-padding {
+    -fx-padding: 10px;
+}
+
+#times {
+    -fx-fit-to-height: true;
+    -fx-background-color: transparent;
+    -fx-font: 14px "Sans-serif";
+}
+
+.time-entry {
+    -fx-hgap: 20px;
+    -fx-vgap: 10px;
+}
+
+.users {
+    -fx-fit-to-height: true;
+    -fx-background-color: transparent;
+}
+
+.users-padding {
+    -fx-font: 15px "Sans-serif";
+    -fx-padding: 5px 10px;
+}
+
+.users-transparent {
+    -fx-background-color: transparent;
+}
