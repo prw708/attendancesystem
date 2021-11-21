@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.2" fx:controller="com.example.attendancesystem.ResetDataController">
+    <padding><Insets bottom="20" left="20" right="20" top="20" /></padding>
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+    <Text styleClass="h4" text="Reset Data" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <VBox GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <Label text="Are you sure you want to delete all data from this app?" wrapText="true" />
+    </VBox>
+    <GridPane alignment="BOTTOM_RIGHT" hgap="10" GridPane.columnIndex="0" GridPane.rowIndex="2">
+        <Button onAction="#onResetButtonClick" styleClass="btn, btn-danger" text="Reset" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Button onAction="#onCancelButtonClick" styleClass="btn" text="Cancel" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints />
+        </rowConstraints>
+    </GridPane>
+</GridPane>

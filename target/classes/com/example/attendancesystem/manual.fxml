@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.attendancesystem.ManualEntryController">
+    <padding><Insets bottom="20" left="20" right="20" top="20" /></padding>
+    <Text styleClass="h4" text="Date and Time Entry" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0" />
+    <Label fx:id="errors" styleClass="lbl, alert-danger" visible="false" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+    <Label text="Check-in Date" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <DatePicker fx:id="checkinDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <Label text="Check-in Time" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <TextField fx:id="checkinTime" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    <Label text="Check-out Date" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+    <DatePicker fx:id="checkoutDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <Label text="Check-out Time" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+    <TextField fx:id="checkoutTime" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+    <GridPane alignment="TOP_RIGHT" hgap="10" GridPane.columnIndex="1" GridPane.rowIndex="6">
+        <Button onAction="#onEnterButtonClick" styleClass="btn, btn-primary" text="Enter" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Button onAction="#onCancelButtonClick" styleClass="btn, btn-danger" text="Cancel" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints />
+        </rowConstraints>
+    </GridPane>
+   <columnConstraints>
+      <ColumnConstraints minWidth="100" />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="20"/>
+      <RowConstraints minHeight="20"/>
+      <RowConstraints minHeight="20"/>
+      <RowConstraints minHeight="20"/>
+      <RowConstraints minHeight="20"/>
+      <RowConstraints minHeight="20"/>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
