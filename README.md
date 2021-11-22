@@ -4,4 +4,4 @@ This is a simple attendance system coded in Java and H2 database. It is meant to
 
 ## Usage
 
-As of this time, only Windows PCs are supported. Copy Attendance.exe and the out folder onto a selected location in your Windows PC. Alternatively, download the AttendanceSystem.zip file and extract to your preferred location. Make sure you have a Java Runtime Environment installed. Double-click on the AttendanceSystem.exe to run the program.
+As of this time, only Windows PCs are supported. Copy Attendance.exe and the out folder onto a selected location in your Windows PC. Alternatively, download the AttendanceSystem.zip file and extract to your preferred location. Make sure you have a Java Runtime Environment installed. Double-click on the AttendanceSystem.exe to run the program. The first user you create will be an admin. Then, the other users will be regular ones.
